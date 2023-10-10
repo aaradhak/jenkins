@@ -203,7 +203,7 @@ function download() {
             return 1
         fi
 
-        #resolveDependencies "$plugin"
+        resolveDependencies "$plugin"
     else
         lockFile=$(getLockFile "$plugin")
         lockedVersion=$(cat $lockFile)
